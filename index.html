@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JS Todo LIst app - W3SCHOOL</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="calendar-module">
+        <div class="grid-calendar-module">
+          <div id="child-A" class="grid-child">
+            <div class="calenda-box">
+              <div class="left-calenda-box">
+                <p id="dis-date"></p>
+              </div>
+              <div class="right-calenda-box">
+                <ul id="month-year">
+                  <li>
+                    <p id="dis-month"></p>
+                  </li>
+                  <li>
+                    <p id="dis-year"></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="child-B" class="grid-child">
+            <p id="dis-day"></p>
+          </div>
+        </div>
+      </div>
+
+  <!-- Add list item function -->
+      <div id="item-adder-box" class="header">
+        <input type="text" id="myInput" placeholder="Write your list here...">
+        <span id="addbtn" class="functbtn"><span>Add</span></span>
+      </div>
+
+      <!-- Search function -->
+      <div id="item-search-box" class="header">
+        <input type="text" id="userSearch" placeholder="Search your list here...">
+      </div>
+
+        <div id="itemlist" class="list-continer">
+        <ul id="myUL">
+        </ul>
+      </div>
+    </div>
+
+   <div class="footer">
+     <div class="container">
+       <div class="moreOption">
+         <div class="fixed-pos-btn">
+           <div class="box-fixed">
+             <div class="moreFunc"><span><i class="fa fa-th" aria-hidden="true"></i></span></div>
+             <div class="addBtnAnimated"><span><i id="addIcon" class="fa fa-plus-circle" aria-hidden="true"></i></span></div>
+             <div class="searchList"><span><i id="searchIcon" class="fa fa-search" aria-hidden="true"></i></span></div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+    <!-- container-fluid -->
+  </div>
+
+  <script src="js/list.js"></script>
+  <script src="js/time-date.js"></script>
+  <script src="js/icon-features.js"></script>
+  <script src="js/search.js"></script>
+
+</body>
+
+</html>

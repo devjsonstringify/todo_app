@@ -1,0 +1,19 @@
+
+Dated started: July 30, 2017
+
+This is my pure JS todo list application. I'm excited to finish this app, adding another project to my portfolio.
+Originated from w3school and will modify adding more features below are the details.
+
+- Welcome message
+- Search function
+- Grid
+- List item numbering
+- Saving / store the list
+- time
+- Third party Integration
+- Can upload images / videos
+- Require or wepback integration
+- sass conversion
+- Fine Tuning of codebase
+
+Source: https://www.w3schools.com/howto/howto_js_todolist.asp
