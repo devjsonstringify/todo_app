@@ -3,6 +3,11 @@
 var addbtn = document.querySelector('#addbtn');
 addbtn.addEventListener('click', addItem, false);
 
+
+//Declarative variables
+
+
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByClassName("items");
 var i;
@@ -27,7 +32,7 @@ for (i = 0; i < close.length; i++) {
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
+  if (ev.target.className === 'items') {
     ev.target.classList.toggle('checked');
   }
 }, false);
@@ -35,30 +40,46 @@ list.addEventListener('click', function(ev) {
 // Create a new list item when clicking on the "Add" button
 function addItem() {
 
+  //get the parent div of "UL"
+  var listItems =  document.getElementById("itemlist").getElementsByTagName('ul')[0];
+
+  // create 'LI'
   var li = document.createElement("li");
-  li.classList.add('items');
+
+  // create 'P'
+  var ptag = document.createElement("p");
+  ptag.classList.add('items');
+
+  // append 'LI' to 'UL'
+  listItems.appendChild(li);
+  li.appendChild(ptag);
+
+  // create textnode for 'P'
   var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  ptag.innerHTML = inputValue;
 
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("myUL").appendChild(li);
-    new_html = "<li>" + li + "</li>";
+      document.getElementById("myUL").appendChild(li);
+
   }
   document.getElementById("myInput").value = "";
 
+  // create 'close' span
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
-  li.appendChild(span);
+  ptag.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+      // var div = this.parentElement;
+      // div.style.display = "none";
+      var parentRemove = document.getElementById("itemlist").getElementsByTagName('ul')[0];
+      var thisChild = parentRemove.getElementsByTagName('li');
+      parentRemove.removeChild(thisChild);
     }
   }
 }
