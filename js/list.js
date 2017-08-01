@@ -46,6 +46,7 @@ function addItem() {
   // create 'LI'
   var li = document.createElement("li");
 
+
   // create 'P'
   var ptag = document.createElement("p");
   ptag.classList.add('items');
@@ -62,7 +63,6 @@ function addItem() {
     alert("You must write something!");
   } else {
       document.getElementById("myUL").appendChild(li);
-
   }
   document.getElementById("myInput").value = "";
 
@@ -74,12 +74,10 @@ function addItem() {
   ptag.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
+    // Remove the ite 'LI' when close is clicked
     close[i].onclick = function() {
-      // var div = this.parentElement;
-      // div.style.display = "none";
-      var parentRemove = document.getElementById("itemlist").getElementsByTagName('ul')[0];
-      var thisChild = parentRemove.getElementsByTagName('li');
-      parentRemove.removeChild(thisChild);
+      var thisCloseBtn = this.closest('li');
+      thisCloseBtn.parentNode.removeChild(thisCloseBtn);
     }
   }
 }
