@@ -232,3 +232,21 @@ li.todoitem {
     background-color: rgba(51,51,51, 1);
       cursor: pointer;
 }
+/*search*/
+#item-search-box #userSearch {
+   width: 100%;
+}
+
+/*grid view*/
+.show-grid-view{
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.show-grid-view li{
+  flex: 1 1 33%;
+}
