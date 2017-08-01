@@ -76,8 +76,13 @@ function addItem() {
   for (i = 0; i < close.length; i++) {
     // Remove the ite 'LI' when close is clicked
     close[i].onclick = function() {
-      var thisCloseBtn = this.closest('li');
-      thisCloseBtn.parentNode.removeChild(thisCloseBtn);
+
+      // Asking the user before deleting item
+      var warningMessage = confirm("Warning! Are you sure you want to delete this note?");
+      if(warningMessage){
+        var thisCloseBtn = this.closest('li');
+        thisCloseBtn.parentNode.removeChild(thisCloseBtn);
+      }
     }
   }
 }
