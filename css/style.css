@@ -75,10 +75,11 @@ ul li.checked::before {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
+  bottom: 0;
 }
 
 .close:hover {
-  background-color: #f44336;
+  background-color: rgb(255, 187, 0);
   color: white;
 }
 
@@ -86,7 +87,7 @@ ul li.checked::before {
 /* Style the header */
 
 .header {
-  border: 1px solid rgba(51,51,51,.1);
+  border: 1px solid rgba(51, 51, 51, .1);
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -110,7 +111,7 @@ input {
   padding: 10px;
   float: left;
   font-size: 16px;
-      border-bottom: 1px solid rgba(51,51,51,.1);
+  border-bottom: 1px solid rgba(51, 51, 51, .1);
 }
 
 
@@ -119,7 +120,7 @@ input {
 .functbtn {
   padding: 10px;
   width: 25%;
-  background: rgba(51,51,51,.1);
+  background: rgba(51, 51, 51, .1);
   color: #555;
   float: left;
   text-align: center;
@@ -144,7 +145,7 @@ input {
 
 .grid-child {
   flex-basis: 50%;
-      position: relative;
+  position: relative;
 }
 
 .calenda-box {
@@ -185,60 +186,76 @@ ul#month-year p {
   padding-top: 4.5%;
   box-sizing: border-box;
 }
+
 #dis-day {
-    font-size: 2em;
-    text-transform: uppercase;
-    position: absolute;
-    top: 25%;
-    margin: 0;
-    right: 0;
-}
-#myUL {
-  list-style: none;
-max-height: 50vh;
-overflow: auto;
-}
-li.todoitem {
-    border: 1px solid rgba(51,51,51,.1);
-}
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-.box-fixed {
-    display: flex;
-    justify-content: space-between;
-}
-.box-fixed span {
-    font-size: 2em;
+  font-size: 2em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  right: 0;
 }
 
-.visible{
+#myUL {
+  list-style: none;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+li.todoitem {
+  border: 1px solid rgba(51, 51, 51, .1);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.box-fixed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-fixed span {
+  font-size: 2em;
+}
+
+.visible {
   display: block;
 }
-.hidden{
+
+.hidden {
   display: none;
 }
 
+
 /*icons*/
+
 .fa {
-    background-color: rgba(51,51,51,.1);
-    padding: 20px;
-    border-radius: 50%;
-}
-.fa:hover {
-    background-color: rgba(51,51,51, 1);
-      cursor: pointer;
-}
-/*search*/
-#item-search-box #userSearch {
-   width: 100%;
+  background-color: rgb(255, 187, 0);
+  padding: 20px;
+  border-radius: 50%;
+  color: #ffffff;
 }
 
+.fa:hover {
+  background-color: rgba(51, 51, 51, 1);
+  cursor: pointer;
+}
+
+
+/*search*/
+
+#item-search-box #userSearch {
+  width: 100%;
+}
+
+
 /*grid view*/
-.show-grid-view{
+
+.show-grid-view {
   display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -247,6 +264,10 @@ li.todoitem {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.show-grid-view li{
+
+.show-grid-view li {
   flex: 1 1 33%;
+  padding: 1em;
+  box-sizing: border-box;
+  border: 1px solid rgba(51, 51, 51, .1);
 }
